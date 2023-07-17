@@ -24,3 +24,16 @@ class FordFactory(CarFactory):
 
     def create_coupe_car(self):
         print("Произведён автомобиль - FordCoupe")
+def execute_application():
+    # Тойота
+    toyota_factory = ToyotaFactory()
+    toyota_factory.create_sedan_car()
+    toyota_factory.create_coupe_car()
+    # Форд
+    ford_factory = FordFactory()
+    ford_factory.create_sedan_car()
+    ford_factory.create_coupe_car()
+
+
+if __name__ == "__main__":
+    execute_application()
