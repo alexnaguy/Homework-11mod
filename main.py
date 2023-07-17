@@ -39,3 +39,12 @@ class CardReader(USB):
     def connect_with_usb_cable(self):
         self.__memory_card.insert()
         self.__memory_card.copy_data()
+
+def execute_application():
+    memory_card = MemoryCard()
+    card_reader = CardReader(memory_card)
+    card_reader.connect_with_usb_cable()
+
+
+if __name__ == "__main__":
+    execute_application()
