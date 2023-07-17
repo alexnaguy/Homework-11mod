@@ -226,3 +226,35 @@ class BuilderHouse(Builder):
     def get_house(self):
         print("Дом построен.")
         return self.__house
+def execute_application():
+    # Задание 1
+    scooter_log = ScooterLogistic()
+    scooter = scooter_log.create_transport()
+    scooter.deliver()
+
+    bicycle_log = BicycleLogistic()
+    bicycle = bicycle_log.create_transport()
+    bicycle.deliver()
+
+    car_log = CarLogistic()
+    car = car_log.create_transport()
+    car.deliver()
+    # Задание 2
+
+    builder_house = BuilderHouse()
+
+    builder_house.create()
+    builder_house.build_walls(BrickWall())
+    builder_house.install_doors(WoodenDoor, 4)
+    builder_house.insert_window(PlasticWindow(), 8)
+    builder_house.build_roof(MetalTile())
+    builder_house.build_pool(Pool(8, 4))
+    builder_house.get_house()
+
+
+
+
+
+
+if __name__ == "__main__":
+    execute_application()
